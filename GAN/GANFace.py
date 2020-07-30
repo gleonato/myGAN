@@ -20,7 +20,7 @@ from keras.engine.network import Network      # Gambi
 # DATADIR = "/Users/gustavoleonato/Projects/DeepFakeProject/DFcreation/myGAN/databolso"
 DATADIR = "/home/leonato/Projects/myGAN/databolso"
 IMG_SIZE = 56
-EPOCHS = 50001
+EPOCHS = 150001
 BATCH_SIZE = 132
 
 
