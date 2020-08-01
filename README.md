@@ -1,1 +1,3 @@
 # myGAN
+
+Generative Adversarial Network  
