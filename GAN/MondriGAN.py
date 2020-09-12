@@ -190,6 +190,7 @@ class GAN():
         # print(gen_imgs.shape)
         gen_img = 0.5 * gen_img + 0.5
         fig, axs = plt.subplots(1)
+        axs.imshow(gen_img)
         # cnt = 0
         # for i in range(r):
         #     for j in range(c):
