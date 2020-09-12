@@ -169,7 +169,7 @@ class GAN():
         r, c = 5, 5
         noise = np.random.normal(0, 1, (r * c, self.latent_dim))
         gen_imgs = self.generator.predict(noise)
-        print(gen_imgs)
+        print(gen_imgs.shape)
         gen_imgs = 0.5 * gen_imgs + 0.5
         fig, axs = plt.subplots(r, c)
         cnt = 0
