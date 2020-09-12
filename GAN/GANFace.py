@@ -16,10 +16,11 @@ import os
 from keras.engine.network import Network      # Gambi
 
 
-# Setup do model
+# Parametros do model
 # DATADIR = "/Users/gustavoleonato/Projects/DeepFakeProject/DFcreation/myGAN/databolso"
-DATADIR = "/home/leonato/Projects/myGAN/databolso"
-IMG_SIZE = 72 # 56
+# DATADIR = "/home/leonato/Projects/myGAN/databolso"
+DATADIR = "/home/leonato/Projects/myGAN/Piet_Mondrian"
+IMG_SIZE = 172 # 56
 EPOCHS = 400001
 BATCH_SIZE = 132
 
@@ -185,7 +186,8 @@ class GAN():
         cnt = 0
         for i in range(r):
             for j in range(c):
-                axs[i, j].imshow(gen_imgs[cnt, :, :, 0], cmap='gray')
+                # axs[i, j].imshow(gen_imgs[cnt, :, :, 0], cmap='gray')
+                axs[i, j].imshow(gen_imgs[cnt, :, :, 0])
                 axs[i, j].axis('off')
                 cnt += 1
         fig.savefig("images/%d.png" % epoch)
@@ -194,4 +196,4 @@ class GAN():
 
 if __name__ == '__main__':
     gan = GAN()
-    gan.train(epochs=EPOCHS, batch_size=132, sample_interval=100)
+    gan.train(epochs=EPOCHS, batch_size=BATCH_SIZE, sample_interval=100)
